@@ -1,0 +1,156 @@
+/* Estilos generales */
+body {
+  background-color: #1f2532;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Estilos del contenedor principal */
+.mainContainer {
+  max-width: 1300px;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+/* Estilos del encabezado */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header>h1 {
+  color: #fff;
+}
+
+/* Estilos de la tabla */
+.table,
+thead,
+th,
+tr,
+td {
+  border: 1px solid #8c8c8c;
+  border-collapse: collapse;
+  padding: 2rem;
+  color: #fff;
+}
+
+/* Estilos del modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  background-color: rgba(188, 188, 188, 0.8);
+  z-index: 10;
+  pointer-events: visible;
+  margin: 0;
+  box-sizing: content-box;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.modal__h4 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.modal.active {
+  display: grid;
+  place-content: center;
+}
+
+/* Estilos del formulario dentro del modal */
+.modal__form {
+  padding: 2rem;
+  background-color: #081d32;
+  color: #fff;
+  opacity: 1;
+  z-index: 20;
+  cursor: initial;
+}
+
+/* Estilos de la cuadrícula del formulario */
+.modal__form--grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* Estilos de los placeholders de los campos de entrada */
+.modal__form input::placeholder {
+  font-size: 14px;
+}
+
+/* Estilos del botón de envío del formulario */
+.modal__form button[type="submit"] {
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #0d547e;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal__form button[type="submit"]:hover {
+  background-color: #0b486c;
+}
+
+/* Estilos del cursor de cierre */
+.x-cursor {
+  cursor: url('./assets/icon-close.png'), auto;
+}
+
+/* Estilos del botón "Agregar estudiante" */
+.addStudentBtn {
+  background-color: #114b6c;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addStudentBtn:hover {
+  background-color: #0d3c52;
+}
+
+/* Estilos de los botones de "Editar estudiante" */
+.edit {
+  background-color: #0d547e;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit:hover {
+  background-color: #0b486d;
+}
+
+/* Estilos de los fieldsets del formulario */
+.modal__form fieldset {
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos de las etiquetas del formulario */
+.modal__form label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos de los campos de entrada del formulario */
+.modal__form input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}

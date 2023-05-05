@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <title>Registro Estudiantes</title>
+</head>
+
+<body>
+  <div class="mainContainer">
+    <header class="header">
+      <h1>Registro Estudiantes con Typescript</h1>
+      <button class="addStudentBtn">Agregar Estudiante</button>
+    </header>
+    <table class="table">
+      <thead>
+        <th>Id de Identificación</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Celular</th>
+        <th>Correo</th>
+        <th>LinkedIn</th>
+        <th>GitHub</th>
+        <th colspan="2" style="text-align: center;">Opciones</th>
+      </thead>
+      <tbody class="tbody"></tbody>
+    </table>
+  </div>
+
+  <!-- Modal - Formulario -->
+  <dialog class="modal x-cursor">
+    <form class="modal__form">
+      <h4 class="modal__h4"></h4>
+      <input type="hidden" name="identificador">
+      <div class="modal__form--grid">
+        <fieldset>
+          <label for="tipoIdentificacion">Tipo de Identificación:</label>
+          <input type="number" id="tipoIdentificacion" name="tipoIdentificacion"
+            placeholder="Ingresa el tipo de identificación" required>
+        </fieldset>
+        <fieldset>
+          <label for="numeroIdentificacion">Número de Identificación:</label>
+          <input type="number" id="numeroIdentificacion" name="numeroIdentificacion"
+            placeholder="Ingresa el número de identificación" required>
+        </fieldset>
+        <fieldset>
+          <label for="nombres">Nombres:</label>
+          <input type="text" id="nombres" name="nombres" placeholder="Ingresa los nombres" required>
+        </fieldset>
+        <fieldset>
+          <label for="apellidos">Apellidos:</label>
+          <input type="text" id="apellidos" name="apellidos" placeholder="Ingresa los apellidos" required>
+        </fieldset>
+        <fieldset>
+          <label for="celular">Celular:</label>
+          <input type="number" id="celular" name="celular" placeholder="Ingresa el número de celular" required>
+        </fieldset>
+        <fieldset>
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" placeholder="Ingresa el correo electrónico" required>
+        </fieldset>
+        <fieldset>
+          <label for="linkedin">LinkedIn:</label>
+          <input type="url" id="linkedin" name="linkedin" placeholder="Ingresa el perfil de LinkedIn" required>
+        </fieldset>
+        <fieldset>
+          <label for="github">GitHub:</label>
+          <input type="url" id="github" name="github" placeholder="Ingresa el perfil de GitHub" required>
+        </fieldset>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </dialog>
+
+  <script src="/dist/main.js"></script>
+</body>
+
+</html>
